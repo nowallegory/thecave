@@ -11,129 +11,234 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
 
-background:#0b1220;
-font-family:Segoe UI,Arial,sans-serif;
-color:white;
+    background:
+    linear-gradient(rgba(8,12,20,.88),rgba(8,12,20,.94)),
+    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    font-family:Segoe UI,Arial,sans-serif;
+    color:white;
 
 }
 
 header{
 
-padding:25px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#101827;
-border-bottom:1px solid #293548;
+    padding:25px 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(16,24,39,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #293548;
 
 }
 
-a{
+header h2{
 
-color:white;
-text-decoration:none;
+    font-size:30px;
 
 }
 
 nav{
 
-display:flex;
-gap:25px;
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:#58a6ff;
 
 }
 
 main{
 
-padding:60px;
+    padding:70px;
 
 }
 
 h1{
 
-font-size:50px;
-margin-bottom:15px;
+    font-size:56px;
+
+    margin-bottom:15px;
+
+    text-align:center;
 
 }
 
 .subtitle{
 
-color:#b8b8b8;
-margin-bottom:60px;
+    text-align:center;
+
+    color:#c0c0c0;
+
+    margin-bottom:60px;
+
+    font-size:18px;
 
 }
 
 .tree{
 
-display:flex;
-justify-content:center;
-align-items:flex-start;
-gap:120px;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top:50px;
 
 }
 
-.column{
+.claims-row{
 
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:35px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.claim-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
 
 }
 
 .node{
 
-background:#182233;
-padding:18px;
-border-radius:12px;
-width:260px;
-text-align:center;
-border:2px solid #2c415d;
-cursor:pointer;
-transition:.25s;
+    background:#182233;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    border:2px solid #30465e;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
 
 }
 
 .node:hover{
 
-transform:translateY(-5px);
-border-color:#58a6ff;
+    transform:translateY(-6px);
+
+    border-color:#58a6ff;
 
 }
 
+.node h2,
 .node h3{
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 .node p{
 
-font-size:14px;
-color:#bbbbbb;
+    color:#d3d3d3;
+
+    line-height:1.5;
 
 }
 
-.connector{
+.conclusion{
 
-width:4px;
-height:45px;
-background:#58a6ff;
+    width:700px;
+
+    background:#2563eb;
+
+    border:2px solid #6fb6ff;
+
+}
+
+.claim{
+
+    width:280px;
+
+}
+
+.support{
+
+    width:220px;
+
+    text-align:center;
+
+    background:#202c3f;
+
+}
+
+.vertical-line{
+
+    width:4px;
+
+    height:55px;
+
+    background:#58a6ff;
+
+}
+
+.small{
+
+    height:35px;
 
 }
 
 footer{
 
-margin-top:100px;
-text-align:center;
-padding:40px;
-color:#888;
+    margin-top:100px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#aaaaaa;
+
+    border-top:1px solid rgba(255,255,255,.1);
 
 }
 
@@ -166,90 +271,108 @@ color:#888;
 <h1>Tree of Inquiry</h1>
 
 <p class="subtitle">
-
-Every conclusion is supported by intermediate claims, which are themselves supported by evidence.
-
+Every conclusion is derived from smaller claims, each supported by evidence.
 </p>
 
 <div class="tree">
 
-<div class="column">
+    <!-- Main Conclusion -->
 
-<div class="node" onclick="clicked('Support A')">
+    <div class="node conclusion" onclick="clicked('Main Conclusion')">
 
-<h3>Support A</h3>
+        <h2>Main Conclusion</h2>
 
-<p>Primary evidence placeholder.</p>
+        <p>
+        Family Court contains systemic flaws that can harm the best interests of children.
+        </p>
 
-</div>
+    </div>
 
-<div class="connector"></div>
+    <div class="vertical-line"></div>
 
-<div class="node" onclick="clicked('Support B')">
+    <!-- Claims -->
 
-<h3>Support B</h3>
+    <div class="claims-row">
 
-<p>Expert testimony placeholder.</p>
+        <div class="claim-group">
 
-</div>
+            <div class="node claim">
 
-<div class="connector"></div>
+                <h3>Claim 1</h3>
 
-<div class="node" onclick="clicked('Support C')">
+                <p>Placeholder claim.</p>
 
-<h3>Support C</h3>
+            </div>
 
-<p>Research paper placeholder.</p>
+            <div class="vertical-line small"></div>
 
-</div>
+            <div class="node support">
 
-</div>
+                Support A
 
-<div class="column">
+            </div>
 
-<div class="node" onclick="clicked('Intermediate Claim')">
+            <div class="node support">
 
-<h3>Intermediate Claim</h3>
+                Support B
 
-<p>
+            </div>
 
-Supports combine into a logical conclusion.
+        </div>
 
-</p>
+        <div class="claim-group">
 
-</div>
+            <div class="node claim">
 
-<div class="connector"></div>
+                <h3>Claim 2</h3>
 
-<div class="node" onclick="clicked('Secondary Claim')">
+                <p>Placeholder claim.</p>
 
-<h3>Secondary Claim</h3>
+            </div>
 
-<p>
+            <div class="vertical-line small"></div>
 
-Another logical conclusion.
+            <div class="node support">
 
-</p>
+                Support C
 
-</div>
+            </div>
 
-</div>
+            <div class="node support">
 
-<div class="column">
+                Support D
 
-<div class="node" onclick="clicked('Main Conclusion')">
+            </div>
 
-<h3>Main Conclusion</h3>
+        </div>
 
-<p>
+        <div class="claim-group">
 
-Family Court contains systemic flaws.
+            <div class="node claim">
 
-</p>
+                <h3>Claim 3</h3>
 
-</div>
+                <p>Placeholder claim.</p>
 
-</div>
+            </div>
+
+            <div class="vertical-line small"></div>
+
+            <div class="node support">
+
+                Support E
+
+            </div>
+
+            <div class="node support">
+
+                Support F
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
