@@ -1,0 +1,241 @@
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 80px;
+    background:rgba(13,17,23,.85);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#58a6ff;
+}
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.hero h1{
+
+    font-size:82px;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    max-width:800px;
+
+    font-size:23px;
+
+    color:#d0d0d0;
+
+    line-height:1.6;
+
+}
+
+.buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+button{
+
+    padding:18px 36px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.primary{
+
+    background:#2383ff;
+
+    color:white;
+
+}
+
+.primary:hover{
+
+    background:#0d66d0;
+
+}
+
+.secondary{
+
+    background:transparent;
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.secondary:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.section{
+
+    padding:120px 10%;
+
+}
+
+.section h2{
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#161b22;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    transition:.25s;
+
+    border:1px solid #2b313a;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#58a6ff;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#bdbdbd;
+
+    line-height:1.7;
+
+}
+
+.stats{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    text-align:center;
+
+}
+
+.number{
+
+    font-size:52px;
+
+    color:#58a6ff;
+
+    font-weight:bold;
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#999;
+
+}
+
+</style>
