@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tree of Inquiry</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#0b1220;
+font-family:Segoe UI,Arial,sans-serif;
+color:white;
+
+}
+
+header{
+
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#101827;
+border-bottom:1px solid #293548;
+
+}
+
+a{
+
+color:white;
+text-decoration:none;
+
+}
+
+nav{
+
+display:flex;
+gap:25px;
+
+}
+
+main{
+
+padding:60px;
+
+}
+
+h1{
+
+font-size:50px;
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+color:#b8b8b8;
+margin-bottom:60px;
+
+}
+
+.tree{
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+gap:120px;
+
+}
+
+.column{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:35px;
+
+}
+
+.node{
+
+background:#182233;
+padding:18px;
+border-radius:12px;
+width:260px;
+text-align:center;
+border:2px solid #2c415d;
+cursor:pointer;
+transition:.25s;
+
+}
+
+.node:hover{
+
+transform:translateY(-5px);
+border-color:#58a6ff;
+
+}
+
+.node h3{
+
+margin-bottom:10px;
+
+}
+
+.node p{
+
+font-size:14px;
+color:#bbbbbb;
+
+}
+
+.connector{
+
+width:4px;
+height:45px;
+background:#58a6ff;
+
+}
+
+footer{
+
+margin-top:100px;
+text-align:center;
+padding:40px;
+color:#888;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>The Cave</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="tree.html">Tree</a>
+
+<a href="#">Research</a>
+
+<a href="#">Evidence</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<h1>Tree of Inquiry</h1>
+
+<p class="subtitle">
+
+Every conclusion is supported by intermediate claims, which are themselves supported by evidence.
+
+</p>
+
+<div class="tree">
+
+<div class="column">
+
+<div class="node" onclick="clicked('Support A')">
+
+<h3>Support A</h3>
+
+<p>Primary evidence placeholder.</p>
+
+</div>
+
+<div class="connector"></div>
+
+<div class="node" onclick="clicked('Support B')">
+
+<h3>Support B</h3>
+
+<p>Expert testimony placeholder.</p>
+
+</div>
+
+<div class="connector"></div>
+
+<div class="node" onclick="clicked('Support C')">
+
+<h3>Support C</h3>
+
+<p>Research paper placeholder.</p>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="node" onclick="clicked('Intermediate Claim')">
+
+<h3>Intermediate Claim</h3>
+
+<p>
+
+Supports combine into a logical conclusion.
+
+</p>
+
+</div>
+
+<div class="connector"></div>
+
+<div class="node" onclick="clicked('Secondary Claim')">
+
+<h3>Secondary Claim</h3>
+
+<p>
+
+Another logical conclusion.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<div class="node" onclick="clicked('Main Conclusion')">
+
+<h3>Main Conclusion</h3>
+
+<p>
+
+Family Court contains systemic flaws.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+Prototype Tree of Inquiry
+
+</footer>
+
+<script>
+
+function clicked(name){
+
+alert(name + " clicked.");
+
+}
+
+</script>
+
+</body>
+
+</html>
