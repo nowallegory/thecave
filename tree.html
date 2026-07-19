@@ -31,9 +31,21 @@ body{
 
 }
 
-header{
+nav{
 
-    padding:25px 60px;
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    padding:20px 80px;
+
+    background:rgba(13,17,23,.85);
+
+    backdrop-filter:blur(12px);
 
     display:flex;
 
@@ -41,25 +53,25 @@ header{
 
     align-items:center;
 
-    background:rgba(16,24,39,.85);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid #293548;
+    z-index:100;
 
 }
 
-header h2{
+.logo{
 
-    font-size:30px;
+    font-size:28px;
+
+    font-weight:bold;
 
 }
 
-nav{
+nav ul{
+
+    list-style:none;
 
     display:flex;
 
-    gap:30px;
+    gap:35px;
 
 }
 
@@ -69,7 +81,7 @@ nav a{
 
     text-decoration:none;
 
-    transition:.25s;
+    transition:.3s;
 
 }
 
