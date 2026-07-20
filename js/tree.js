@@ -1,6 +1,6 @@
 const data = {
     title: "Main Conclusion",
-    description:
+    description: 
         "Family Court contains systemic flaws that can harm the best interests of children.",
 
     claims: [
