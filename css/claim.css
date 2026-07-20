@@ -1,0 +1,234 @@
+body{
+
+    background:
+    linear-gradient(rgba(10,15,22,.90),rgba(10,15,22,.95)),
+    url("https://images.unsplash.com/photo-1528747045269-390fe33c19d3?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+
+main{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:140px 70px 80px;
+
+}
+
+.claim-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.claim-number{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
+}
+
+.claim-header h1{
+
+    font-size:52px;
+
+    margin-bottom:25px;
+
+}
+
+.claim-header p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#c8c8c8;
+
+    line-height:1.8;
+
+    font-size:19px;
+
+}
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+}
+
+.left-column,
+.right-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#182233;
+
+    border:2px solid #30465e;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#58a6ff;
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:#58a6ff;
+
+    font-size:28px;
+
+}
+
+.card ul{
+
+    list-style:none;
+
+}
+
+.card li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    line-height:1.6;
+
+}
+
+.card li:last-child{
+
+    border-bottom:none;
+
+}
+
+.card a{
+
+    color:#58a6ff;
+
+    text-decoration:none;
+
+    transition:.2s;
+
+}
+
+.card a:hover{
+
+    color:white;
+
+}
+
+.navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:60px;
+
+}
+
+.back-button{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+.back-button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+@media(max-width:1000px){
+
+    .content-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    main{
+
+        padding:120px 25px 50px;
+
+    }
+
+    .claim-header h1{
+
+        font-size:36px;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+}
