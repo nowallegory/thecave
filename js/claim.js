@@ -197,7 +197,7 @@ claim.counterarguments.forEach(item=>{
 // -----------------------------------
 // Related Claims
 // -----------------------------------
-
+ 
 const related =
 document.getElementById("relatedClaims");
 
