@@ -154,3 +154,19 @@ h1{
     height:35px;
 
 }
+
+.claim{
+
+    user-select:none;
+
+}
+
+.claim h3{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
