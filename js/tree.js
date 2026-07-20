@@ -1,6 +1,7 @@
 const data = {
     title: "Main Conclusion",
-    description: "Family Court contains systemic flaws that can harm the best interests of children.",
+    description:
+        "Family Court contains systemic flaws that can harm the best interests of children.",
 
     claims: [
 
@@ -10,7 +11,8 @@ const data = {
             supports:[
                 "Support A",
                 "Support B"
-            ]
+            ],
+            expanded:false
         },
 
         {
@@ -19,7 +21,8 @@ const data = {
             supports:[
                 "Support C",
                 "Support D"
-            ]
+            ],
+            expanded:false
         },
 
         {
@@ -28,56 +31,83 @@ const data = {
             supports:[
                 "Support E",
                 "Support F"
-            ]
+            ],
+            expanded:false
         }
 
     ]
 };
 
-const tree=document.getElementById("tree");
+function drawTree(){
 
-tree.innerHTML=`
+    const tree=document.getElementById("tree");
 
-<div class="node conclusion">
+    tree.innerHTML=`
 
-    <h2>${data.title}</h2>
+    <div class="node conclusion">
 
-    <p>${data.description}</p>
+        <h2>${data.title}</h2>
 
-</div>
+        <p>${data.description}</p>
 
-<div class="vertical-line"></div>
+    </div>
 
-<div class="claims-row">
+    <div class="vertical-line"></div>
 
-${data.claims.map(claim=>`
+    <div class="claims-row">
 
-<div class="claim-group">
+    ${data.claims.map((claim,index)=>`
 
-<div class="node claim">
+        <div class="claim-group">
 
-<h3>${claim.title}</h3>
+            <div class="node claim"
+                 onclick="toggleClaim(${index})">
 
-<p>${claim.description}</p>
+                <h3>
 
-</div>
+                    ${claim.title}
 
-<div class="vertical-line small"></div>
+                    ${claim.expanded ? "−" : "+"}
 
-${claim.supports.map(s=>`
+                </h3>
 
-<div class="node support">
+                <p>${claim.description}</p>
 
-${s}
+            </div>
 
-</div>
+            ${claim.expanded ? `
 
-`).join("")}
+            <div class="vertical-line small"></div>
 
-</div>
+            ${claim.supports.map(s=>`
 
-`).join("")}
+                <div class="node support">
 
-</div>
+                    ${s}
 
-`;
+                </div>
+
+            `).join("")}
+
+            ` : ""}
+
+        </div>
+
+    `).join("")}
+
+    </div>
+
+    `;
+
+}
+
+function toggleClaim(index){
+
+    data.claims[index].expanded=
+        !data.claims[index].expanded;
+
+    drawTree();
+
+}
+
+drawTree();
