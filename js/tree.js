@@ -61,18 +61,12 @@ function drawTree(){
         <div class="claim-group">
 
             <div class="node claim"
-                 onclick="toggleClaim(${index})">
-
-                <h3>
-
-                    ${claim.title}
-
-                    ${claim.expanded ? "−" : "+"}
-
-                </h3>
-
+                 onclick="window.location.href='claim.html?id=${index+1}'">
+            
+                <h3>${claim.title}</h3>
+            
                 <p>${claim.description}</p>
-
+            
             </div>
 
             ${claim.expanded ? `
