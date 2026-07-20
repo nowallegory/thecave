@@ -41,107 +41,7 @@ THE CAVE
 Every conclusion is derived from smaller claims, each supported by evidence.
 </p>
 
-<div class="tree">
-
-    <!-- Main Conclusion -->
-
-    <div class="node conclusion" onclick="clicked('Main Conclusion')">
-
-        <h2>Main Conclusion</h2>
-
-        <p>
-        Family Court contains systemic flaws that can harm the best interests of children.
-        </p>
-
-    </div>
-
-    <div class="vertical-line"></div>
-
-    <!-- Claims -->
-
-    <div class="claims-row">
-
-        <div class="claim-group">
-
-            <div class="node claim">
-
-                <h3>Claim 1</h3>
-
-                <p>Placeholder claim.</p>
-
-            </div>
-
-            <div class="vertical-line small"></div>
-
-            <div class="node support">
-
-                Support A
-
-            </div>
-
-            <div class="node support">
-
-                Support B
-
-            </div>
-
-        </div>
-
-        <div class="claim-group">
-
-            <div class="node claim">
-
-                <h3>Claim 2</h3>
-
-                <p>Placeholder claim.</p>
-
-            </div>
-
-            <div class="vertical-line small"></div>
-
-            <div class="node support">
-
-                Support C
-
-            </div>
-
-            <div class="node support">
-
-                Support D
-
-            </div>
-
-        </div>
-
-        <div class="claim-group">
-
-            <div class="node claim">
-
-                <h3>Claim 3</h3>
-
-                <p>Placeholder claim.</p>
-
-            </div>
-
-            <div class="vertical-line small"></div>
-
-            <div class="node support">
-
-                Support E
-
-            </div>
-
-            <div class="node support">
-
-                Support F
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+<div class="tree" id="tree"></div>
 
 </main>
 
@@ -151,15 +51,7 @@ Prototype Tree of Inquiry
 
 </footer>
 
-<script>
-
-function clicked(name){
-
-alert(name + " clicked.");
-
-}
-
-</script>
+<script src="js/tree.js"></script>
 
 </body>
 
